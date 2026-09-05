@@ -1,3 +1,4 @@
+import type { span } from "motion/react-client";
 import { Container } from "./components/Container";
 import { StatCard } from "./components/StatCard";
 import { Tag } from "./components/Tag";
@@ -7,6 +8,7 @@ import "./main.css";
 export const App = () => {
   return (
     <div className="flex flex-col min-h-screen overflow-clip bg-[#0a0a0f] text-white">
+      {/*  */}
       <header className="py-[12px] bg-[#0a0a0fcc]">
         <Container>
           <div className="flex items-center gap-1 text-2xl">
@@ -16,6 +18,7 @@ export const App = () => {
           </div>
         </Container>
       </header>
+
       <main className="grow">
         <section className="relative pt-[60px]">
           <Container>
@@ -124,8 +127,127 @@ export const App = () => {
             </div>
           </Container>
         </section>
+
+        <section className="pt-[120px] max-tablet:pt-[60px]">
+          <Container>
+            <div className="mb-[40px] max-tablet:text-center">
+              <h2 className="text-2xl">
+                <span className="text-base text-sky-300">03.</span> Немного кода
+                с этого проекта
+              </h2>
+            </div>
+
+            <div>
+              <div className="border border-[#2a2a3a] rounded-xl overflow-clip">
+                <div className="p-4 bg-gray-900">
+                  <span className="text-sm text-orange-400">
+                    components/Container.tsx
+                  </span>
+                </div>
+                {/*  */}
+                <div className="p-4">
+                  <div>
+                    <span className="text-sky-300">import </span>
+                    <span className="text-sky-300">type </span>
+                    <span>
+                      <span className="text-yellow-300">{"{ "}</span>
+                      <span>FC</span>
+                      <span className="text-yellow-300">{" }"}</span>
+                    </span>
+                    <span className="text-sky-300"> from </span>
+                    <span className="text-sky-400">"react";</span>
+                  </div>
+                  <div className="pb-4">
+                    <span className="text-sky-300">import </span>
+                    <span>
+                      <span className="text-yellow-300">{"{ "}</span>
+                      <span>twMerge</span>
+                      <span className="text-yellow-300">{" }"}</span>
+                    </span>
+                    <span className="text-sky-300"> from </span>
+                    <span className="text-sky-400">"tailwind-merge";</span>
+                    <span>
+                      {/* from "react"; import {twMerge} from "tailwind-merge"; */}
+                    </span>
+                  </div>
+                  {/*  */}
+                  <div className="pb-4">
+                    <span className="text-green-500">interface </span>
+                    <span className="text-cyan-300">
+                      IContainer <span className="text-yellow-300">{"{"}</span>
+                    </span>
+                    <span className="text-green-300 pl-4 block">
+                      className?:{" "}
+                      <span className="text-green-500">string;</span>
+                    </span>
+                    <span className="text-green-300 pl-4 block">
+                      children?:{" "}
+                      <span className="text-green-500">
+                        <span className="text-cyan-300">React</span>.ReactNode;
+                      </span>
+                    </span>
+                    <span className="text-yellow-300">{`}`}</span>
+                  </div>
+                  {/*  */}
+                  <div>
+                    <span className="text-sky-300">export </span>
+                    <span className="text-green-500">const </span>
+                    <span className="text-cyan-300">Container: </span>
+                    <span className="text-green-500">FC</span>
+                    <span className="text-yellow-300">{`<`}</span>
+                    <span className="text-green-500">IContainer</span>
+                    <span className="text-yellow-300">{`> `}</span>
+                    <span className="text-sky-300">= </span>
+                    <span className="text-yellow-300">{`({ `}</span>
+                    <span className="text-white">className, </span>
+                    <span className="text-white">children </span>
+                    <span className="text-yellow-300">{`}) `}</span>
+                    <span className="text-green-500">
+                      {`=> `} <span className="text-yellow-300">{`{`}</span>
+                    </span>
+                    <span className="block pl-4 text-sky-300">
+                      return <span className="text-yellow-300">{`(`}</span>
+                    </span>
+                    <span className="block pl-8 text-green-500">
+                      {`<div`}{" "}
+                      <span className="text-sky-300">
+                        {`className=`}
+                        <span className="text-yellow-300">{`{`}</span>
+                      </span>
+                    </span>
+                    <span className="block pl-12 text-cyan-300">
+                      twMerge<span className="text-yellow-300">{`(`}</span>
+                    </span>
+                    <span className="block pl-14 text-blue-300">
+                      `max-w-[1280px] w-full mx-auto px-[15px] ${`{`}
+                      <span className="text-white">className</span>
+                      {`}`}`,
+                    </span>
+                    <span className="block pl-12 text-yellow-300">
+                      {`)}`}
+                      <span className="text-green-500">{`>`}</span>{" "}
+                    </span>
+                    <span className="block pl-12">
+                      <span className="text-white">
+                        <span className="text-yellow-300">{`{`}</span>children
+                        <span className="text-yellow-300">{`}`}</span>
+                      </span>
+                    </span>
+                    <span className="block pl-8 text-green-500">{`</div>`}</span>
+                    <span className="block pl-4 text-yellow-300">{`);`}</span>
+                    <span className="block text-yellow-300">{`};`}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Container>
+        </section>
+
+        <section className="pt-[120px]"></section>
       </main>
+
       <footer></footer>
+      {/*  */}
     </div>
   );
 };
