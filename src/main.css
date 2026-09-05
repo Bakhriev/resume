@@ -2,4 +2,10 @@
 
 @theme {
   --font-sans: "JetBrains Mono", "sans-serif";
+  --glow: 0 0 10px oklch(82.8% 0.111 230.318);
+  --tablet: 992px;
+
+  --breakpoint-2xl: initial;
+  --breakpoint-tablet: 993px;
+  --breakpoint-phone: 481px;
 }
