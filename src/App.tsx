@@ -1,4 +1,3 @@
-import type { span } from "motion/react-client";
 import { Container } from "./components/Container";
 import { StatCard } from "./components/StatCard";
 import { Tag } from "./components/Tag";
