@@ -341,7 +341,69 @@ export const App = () => {
           </Container>
         </section>
 
-        <section className="pt-[120px]"></section>
+        <section className="pt-[120px]">
+          <Container>
+            <div className="mb-[40px] max-tablet:text-center">
+              <h2 className="text-2xl">
+                <span className="text-base text-sky-300">04.</span> Проекты
+              </h2>
+            </div>
+            <div className="border border-[#2a2a3a] rounded-2xl">
+              <div className="grid grid-cols-2 max-tablet:grid-cols-1 max-tablet:gap-6 p-4">
+                <div className="flex flex-col">
+                  <Tag
+                    title="Featured"
+                    className="text-purple-400 w-fit mb-3"
+                  />
+                  <h3 className="text-2xl mb-3">Krutyak</h3>
+                  <p className="mb-5">
+                    Сайт для кейтеринговой компании «Крутяк» — современный,
+                    адаптивный и удобный сайт с презентацией услуг и
+                    мероприятий. Реализовано Слайды, модальные окна,
+                  </p>
+                  <div className="mb-5">
+                    <span className="inline-block mb-2">Библиотеки:</span>
+                    <div className="flex flex-wrap gap-2">
+                      <Tag title="Swiper" />
+                      <Tag title="Imask" />
+                      <Tag title="Fancybox" />
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-6 flex-wrap">
+                    <a
+                      target="_blank"
+                      href="https://github.com/Bakhriev/krutyak"
+                      className="flex items-center gap-3"
+                    >
+                      <img
+                        width={24}
+                        height={24}
+                        src="/icons/github-icon.svg"
+                        alt="Гитхаб проекта"
+                      />
+                      <span>Github</span>
+                    </a>
+                    <a
+                      target="_blank"
+                      href="https://krutyak.netlify.app"
+                      className="flex items-center gap-3"
+                    >
+                      <img
+                        width={24}
+                        height={24}
+                        src="/icons/link-icon.svg"
+                        alt=""
+                      />
+                      <span>Live Demo</span>
+                    </a>
+                  </div>
+                </div>
+                <div className="bg-[url(/images/krutyak_cite_screen.jpg)] bg-cover bg-center max-tablet:min-h-[350px] max-phone:min-h-[300px] rounded-lg"></div>
+              </div>
+            </div>
+          </Container>
+        </section>
       </main>
 
       <footer></footer>
