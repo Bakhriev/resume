@@ -7,7 +7,6 @@ import "./main.css";
 export const App = () => {
   return (
     <div className="flex flex-col min-h-screen overflow-clip bg-[#0a0a0f] text-white">
-      {/*  */}
       <header className="py-[12px] bg-[#0a0a0fcc]">
         <Container>
           <div className="flex items-center gap-1 text-2xl">
@@ -68,12 +67,10 @@ export const App = () => {
             <div className="grid grid-cols-3 gap-6 max-tablet:grid-cols-2 max-phone:grid-cols-1">
               <div className="p-7 max-tablet:p-4 border border-[#2a2a3a] rounded-2xl bg-[#12121a] transition duration-300 hover:border-[var(--color-sky-300)] hover:shadow-[var(--glow)]  hover:-translate-y-[4px]">
                 <div className="flex gap-3 mb-[20px]">
-                  <img
-                    width={24}
-                    height={24}
-                    src="/icons/react-icon.svg"
-                    alt=""
-                  />
+                  <svg width={24} height={24}>
+                    <use xlinkHref="/__spritemap#sprite-react-icon"></use>
+                  </svg>
+
                   <span>Frontend Core</span>
                 </div>
 
@@ -88,12 +85,9 @@ export const App = () => {
 
               <div className="p-7 max-tablet:p-4 border border-[#2a2a3a] rounded-2xl bg-[#12121a] transition duration-300 hover:border-[var(--color-sky-300)] hover:shadow-[var(--glow)]  hover:-translate-y-[4px]">
                 <div className="flex gap-3 mb-[20px]">
-                  <img
-                    width={24}
-                    height={24}
-                    src="/icons/paint-icon.svg"
-                    alt=""
-                  />
+                  <svg width={24} height={24}>
+                    <use xlinkHref="/__spritemap#sprite-paint-icon"></use>
+                  </svg>
                   <span>Styling & UI</span>
                 </div>
 
@@ -106,12 +100,9 @@ export const App = () => {
 
               <div className="p-7 max-tablet:p-4 border border-[#2a2a3a] rounded-2xl bg-[#12121a] transition duration-300 hover:border-[var(--color-sky-300)] hover:shadow-[var(--glow)]  hover:-translate-y-[4px]">
                 <div className="flex gap-3 mb-[20px]">
-                  <img
-                    width={24}
-                    height={24}
-                    src="/icons/tools-icon.svg"
-                    alt=""
-                  />
+                  <svg width={24} height={24}>
+                    <use xlinkHref="/__spritemap#sprite-tools-icon"></use>
+                  </svg>
                   <span>Tools & State</span>
                 </div>
 
@@ -341,7 +332,7 @@ export const App = () => {
           </Container>
         </section>
 
-        <section className="pt-[120px]">
+        <section className="pt-[120px] max-tablet:pt-[60px]">
           <Container>
             <div className="mb-[40px] max-tablet:text-center">
               <h2 className="text-2xl">
@@ -349,11 +340,11 @@ export const App = () => {
               </h2>
             </div>
             <div className="border border-[#2a2a3a] rounded-2xl">
-              <div className="grid grid-cols-2 max-tablet:grid-cols-1 max-tablet:gap-6 p-4">
-                <div className="flex flex-col">
+              <div className="grid gap-2 grid-cols-2 max-tablet:grid-cols-1 max-tablet:gap-6 p-4">
+                <div className="self-stretch">
                   <Tag
                     title="Featured"
-                    className="text-purple-400 w-fit mb-3"
+                    className="text-purple-400 w-fit mb-3 inline-block"
                   />
                   <h3 className="text-2xl mb-3">Krutyak</h3>
                   <p className="mb-5">
@@ -370,37 +361,77 @@ export const App = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-6 flex-wrap">
+                  <div className="flex items-center gap-4 flex-wrap">
                     <a
                       target="_blank"
                       href="https://github.com/Bakhriev/krutyak"
-                      className="flex items-center gap-3"
+                      className="flex items-center gap-2 text-white px-3 py-2 rounded-[10px] bg-gray-800 transition-colors hover:bg-gray-900 text-xs"
                     >
-                      <img
-                        width={24}
-                        height={24}
-                        src="/icons/github-icon.svg"
-                        alt="Гитхаб проекта"
-                      />
+                      <svg width={14} height={14}>
+                        <use xlinkHref="/__spritemap#sprite-github-icon"></use>
+                      </svg>
                       <span>Github</span>
                     </a>
                     <a
                       target="_blank"
                       href="https://krutyak.netlify.app"
-                      className="flex items-center gap-3"
+                      className="flex items-center gap-2 text-white px-3 py-2 rounded-[10px] transition-colors bg-gray-800 hover:bg-gray-900 text-xs"
                     >
-                      <img
-                        width={24}
-                        height={24}
-                        src="/icons/link-icon.svg"
-                        alt=""
-                      />
+                      <svg width={14} height={14}>
+                        <use xlinkHref="/__spritemap#sprite-link-icon"></use>
+                      </svg>
                       <span>Live Demo</span>
                     </a>
                   </div>
                 </div>
                 <div className="bg-[url(/images/krutyak_cite_screen.jpg)] bg-cover bg-center max-tablet:min-h-[350px] max-phone:min-h-[300px] rounded-lg"></div>
               </div>
+            </div>
+          </Container>
+        </section>
+
+        <section className="pt-[120px] max-tablet:pt-[60px] pb-[40px]">
+          <Container>
+            <div className="mb-[40px] text-center">
+              <h2 className="text-2xl mb-3">
+                <span className="text-base text-sky-300">04.</span> Контакты
+              </h2>
+              <p>Давай сделаем что-нибудь крутое вместе</p>
+            </div>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="mailto:muratbakhriev@gmail.com"
+                className="overflow-hidden flex flex-col gap-2 items-center border border-[#2a2a3a] max-w-[300px] w-full rounded-[14px] transition p-6 transition duration-300 hover:border-[var(--color-sky-300)] hover:shadow-[var(--glow)]  hover:-translate-y-[4px]"
+              >
+                <svg width={48} height={48}>
+                  <use xlinkHref="/__spritemap#sprite-mail-icon"></use>
+                </svg>
+                <span>EMail</span>
+                <span>muratbakhriev@gmail.com</span>
+              </a>
+
+              <a
+                target="_blank"
+                href="https://github.com/Bakhriev"
+                className="overflow-hidden max-w-[300px] w-full flex flex-col gap-2 items-center border border-[#2a2a3a] rounded-[14px] transition p-6 transition duration-300 hover:border-[var(--color-sky-300)] hover:shadow-[var(--glow)]  hover:-translate-y-[4px]"
+              >
+                <svg width={48} height={48}>
+                  <use xlinkHref="/__spritemap#sprite-github-icon"></use>
+                </svg>
+                <span>Github</span>
+                <span>https://github.com/Bakhriev</span>
+              </a>
+
+              <a
+                href="mailto:muratbakhriev@gmail.com"
+                className="overflow-hidden max-w-[300px] w-full flex flex-col gap-2 items-center border border-[#2a2a3a] rounded-[14px] transition p-6 transition duration-300 hover:border-[var(--color-sky-300)] hover:shadow-[var(--glow)]  hover:-translate-y-[4px]"
+              >
+                <svg width={48} height={48}>
+                  <use xlinkHref="/__spritemap#sprite-telegram-icon"></use>
+                </svg>
+                <span>Telegram</span>
+                <span>@nfithr</span>
+              </a>
             </div>
           </Container>
         </section>
