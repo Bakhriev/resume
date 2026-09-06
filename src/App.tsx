@@ -423,7 +423,8 @@ export const App = () => {
               </a>
 
               <a
-                href="mailto:muratbakhriev@gmail.com"
+                target="_blank"
+                href="https://t.me/nfithr"
                 className="overflow-hidden max-w-[300px] w-full flex flex-col gap-2 items-center border border-[#2a2a3a] rounded-[14px] transition p-6 transition duration-300 hover:border-[var(--color-sky-300)] hover:shadow-[var(--glow)]  hover:-translate-y-[4px]"
               >
                 <svg width={48} height={48}>
